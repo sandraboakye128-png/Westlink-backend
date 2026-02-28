@@ -24,6 +24,16 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 
+// ✅ CORS FIRST
+app.use(cors({
+  origin: "https://westlink.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+// ✅ JSON parser
+app.use(express.json());
+
 // ---------- DATABASE ----------
 if (!process.env.DATABASE_URL) {
   console.error("❌ DATABASE_URL not set in environment variables");
@@ -94,20 +104,8 @@ async function initTables() {
 }
 initTables();
 
-/// ---------- MIDDLEWARE ----------
-// CORS MUST be first
-app.use(
-  cors({
-    origin: ["https://westlink-frontend.onrender.com"], // frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  })
-);
 
-app.use(express.json()); // body parser
 
-app.use(express.json()); // body parser
 
 // ---------- AUTH ----------
 
