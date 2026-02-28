@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1762890878822,
+    "name": "oxbee",
+    "email": "agyeiosborn59@gmail.com",
+    "password": "$2a$10$EZ4hYL5fs0imGVYfs2Bheuuu0faZD00w1Q5roIogp8DdWo4Qyq3mm",
+    "isAdmin": false
+  },
+  {
+    "id": 1,
+    "name": "admin",
+    "email": "admin@example.com",
+    "password": "$2b$10$RNXPKMAUCSsRnenQ5jeYZOP3LOk8DuebSMXPltE5iOxUvT82hP.a.",
+    "isAdmin": true
+  }
+]

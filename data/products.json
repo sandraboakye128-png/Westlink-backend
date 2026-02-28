@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1762888109919,
+    "name": "cockburn",
+    "price": 6000,
+    "category": "Wines & Alcohol",
+    "image": "/uploads/1762888109895-download.jpg"
+  },
+  {
+    "id": 1762895143928,
+    "name": "Nivea",
+    "price": 300,
+    "category": "Lotions & Body care",
+    "image": "/uploads/1762895143906-download (3).jpg"
+  }
+]
