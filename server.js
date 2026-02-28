@@ -94,21 +94,20 @@ async function initTables() {
 }
 initTables();
 
-// ---------- MIDDLEWARE ----------
-app.use(express.json());
-
+/// ---------- MIDDLEWARE ----------
+// CORS MUST be first
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:3000",
-      "https://westlink-frontend.onrender.com",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["https://westlink-frontend.onrender.com"], // frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
+app.use(express.json()); // body parser
+
+app.use(express.json()); // body parser
 
 // ---------- AUTH ----------
 
